@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <a href="{% url 'leads:lead_list' %}">go back to the leads page</a>
+  <hr/>
+    <h1>delete the lead</h1>    
+    <form method="post" >
+
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">submit</button>
+    </form>
+    
+    {% endblock content %}
+
+{% comment %} i guess lead delete view uses the form by default so thats why it is used here {% endcomment %}
