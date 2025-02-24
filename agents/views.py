@@ -23,7 +23,7 @@ class AgentCreateView(LoginRequiredMixin,generic.CreateView):
 
     def get_success_url(self):
 
-        return  reverse("agents:agent_list.html")
+        return  reverse("agents:agent_list")
     
     def form_valid(self,form):
 
