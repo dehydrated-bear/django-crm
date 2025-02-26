@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Delete the Agent</h1>
+
+<hr>
+
+<a href="{% url 'agents:agent_list' %}"><h2>go back to agent list</h2></a>
+
+
+<form  method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button type="submit">
+        delete
+    </button>
+
+</form>
+
+{% endblock content %}
