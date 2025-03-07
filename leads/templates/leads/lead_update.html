@@ -1,5 +1,6 @@
 
 {% extends "base.html" %}
+{% load tailwind_filters %}
 
 {% block content %}
 
@@ -18,7 +19,7 @@
         <form method="post" id="changevaluesubmit">
 
           {% csrf_token %}
-          {{form.as_p}}
+          {{form|crispy}}
           
       </form>
         
